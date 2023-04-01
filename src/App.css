@@ -1,38 +1,127 @@
 .App {
   text-align: center;
+  max-width: 80%;
+  margin: 0 auto 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loading {
+  margin-top: 5%;
+  width: 15%;
+  animation: infinite;
+  animation-name: loading;
+  animation-duration: 3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   font-size: calc(10px + 2vmin);
   color: white;
+  text-shadow: 4px 3px 5px grey;
 }
 
-.App-link {
-  color: #61dafb;
+.selector {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin-top: 2.5%;
+  margin-bottom: 7.5%;
 }
 
-@keyframes App-logo-spin {
+select {
+  width: 50%;
+  font-size: larger;
+  background: linear-gradient(to bottom, aquamarine, grey);
+  box-shadow: 0px 0px 10px white;
+  border: 0;
+  padding-left: 5%;
+}
+
+button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  background: linear-gradient(to right, aquamarine, grey);
+  box-shadow: 0px 0px 15px white;
+  border-radius: 25px;
+  animation: both;
+  animation-duration: 1s;
+  animation-name: buttonNotHover;
+}
+
+button:hover {
+  animation: both;
+  animation-duration: 1s;
+  animation-name: buttonHover;
+}
+
+@keyframes buttonHover {
   from {
-    transform: rotate(0deg);
+    box-shadow: 0px 0px 15px white;
   }
+
   to {
-    transform: rotate(360deg);
+    box-shadow: 0px 0px 45px white;
   }
+}
+
+@keyframes buttonNotHover {
+  from {
+    box-shadow: 0px 0px 45px white;
+  }
+
+  to {
+    box-shadow: 0px 0px 15px white;
+  }
+}
+
+.listAuth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-top: 15%;
+}
+
+.listAuth input {
+  width: 15vw;
+  height: 3vh;
+  border: 0;
+  background: linear-gradient(to left, aquamarine, grey);
+}
+
+.buttonAuth {
+  width: 75px;
+  height: 25px;
+}
+
+.listPokemons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.listPokemon {
+  display: flex;
+  flex-direction: column;
+  background-color: #20293b;
+  margin: 15px;
+}
+
+.listPokemon h6 {
+  margin: 15px 0 0 0;
 }
