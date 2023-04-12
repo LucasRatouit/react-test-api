@@ -118,10 +118,14 @@ button:hover {
 .listPokemon {
   display: flex;
   flex-direction: column;
-  background-color: #20293b;
+  background-color: gray;
   margin: 15px;
 }
 
 .listPokemon h6 {
   margin: 15px 0 0 0;
+}
+
+.listPokemon img {
+  width: 215px;
 }
